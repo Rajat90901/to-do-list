@@ -12,6 +12,16 @@ function add(title){
   }
  todos.push(task)
 }
+  
+function delete(Id){
+  let index=todos.findIndex(function(task){
+    return task.Id==Id;
+  });
+  if(index!==1){
+    todos.splice(index,1)
+  }
+}
+
 
 if(command==="add"){
     add(title);
