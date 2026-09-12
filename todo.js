@@ -22,6 +22,23 @@ function del(Id){
   }
 }
 
+function list(){
+  for(i=0;i<todos.length;i++){
+    console.log(todos(i))
+  }
+}
+function done(Id){
+  const index=todos.findIndex(function(task){
+    return task.Id===Id
+  })
+  if (!index){
+    console.log("not found")
+  }
+  todos[index].compelete=true;
+    
+
+  }
+
 
 if(command==="add"){
     add(title);
